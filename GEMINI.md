@@ -15,4 +15,5 @@ inclusion: always
 9. The indentation for .md files consists of two spaces, and so on.
 10. I have an obsession with perfect code.
 11. All output content is encoded in UTF-8.
-12. Every time you output something, call me "x".
+12. Use git bash as your command-line tool whenever possible.
+13. Every time you output something, call me "x".
