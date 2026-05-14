@@ -2,6 +2,11 @@
 
 本手册包含 GSD 框架中所有核心指令的翻译、功能描述及典型使用场景，旨在帮助开发者快速掌握该 AI Agent 工作流。
 
+## 关联仓库 (Related Repositories)
+
+- **核心框架**: [gsd-build/get-shit-done](https://github.com/gsd-build/get-shit-done) — GSD 自动化工作流的官方实现。
+- **底层规约**: [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — 提供标准化的 AI 代理工程域技能支持。
+
 ## /gsd-add-tests
 
 - **功能简述**: 为完成的阶段生成测试
