@@ -2,27 +2,49 @@
 
 本项目是一个集成了标准化工程规约、自动化工作流指令及精选 AI 技能库的综合工程中心。其核心目标是为 AI 代理（Agent）确立一套标准化的软件开发工作流，并建立可量化的质量控制基准。
 
-## 全局行为准则 (Global Governance)
-
-### [Antigravity / Gemini CLI 核心规范](./GEMINI.md)
-
-全局行为约束。这是 AI 代理执行任务时的底层逻辑底座，涵盖了语言偏好、安全边界、交付路径、代码质量审计以及交互标识等核心标准。所有 AI 代理在介入本项目时必须优先加载并严格执行此规范。
-
 ## 核心组件 (Core Components)
 
-### [工程域技能模块 (Engineering Skills)](./agent-skills.md)
+| 组件                                     | 说明                                                                                    |
+| ---------------------------------------- | --------------------------------------------------------------------------------------- |
+| [GEMINI.md](./GEMINI.md)                 | 全局行为约束，AI 代理执行任务的底层逻辑底座（语言偏好、安全边界、交付路径、质量审计等） |
+| [agent-skills.md](./agent-skills.md)     | 工程域技能模块，定义 20+ 个标准化 AI 代理工程技能（TDD、SDD、代码审计等）               |
+| [GSD.md](./GSD.md)                       | GSD (Get Shit Done) 自动化任务执行框架，覆盖需求讨论、计划、执行、验证全生命周期        |
+| [awesome-skills.md](./awesome-skills.md) | 社区精选 AI 助手扩展技能集与安装手册                                                    |
 
-定义了 20+ 个标准化的 AI 代理工程技能模块（如 TDD, SDD, 代码审计等），用于收敛模型幻觉并确立输出一致性标准。
+### 已注册技能模块 (Registered Skills)
 
-### [GSD (Get Shit Done) 工作流](./GSD.md)
+项目内置了 20+ 个标准化的 AI 代理技能模块，存放于 `skills/` 目录下：
 
-一套完整的、基于阶段（Phase）的自动化任务执行框架。包含从需求讨论（Discuss）、计划（Plan）到执行（Execute）及验证（Verify）的全生命周期指令。
+| 技能模块                      | 说明                 |
+| ----------------------------- | -------------------- |
+| adapt-agent-configs           | Agent 配置适配       |
+| api-and-interface-design      | API 与接口设计       |
+| browser-testing-with-devtools | 浏览器 DevTools 测试 |
+| ci-cd-and-automation          | CI/CD 与自动化       |
+| code-review-and-quality       | 代码审查与质量       |
+| code-simplification           | 代码简化             |
+| context-engineering           | 上下文工程           |
+| debugging-and-error-recovery  | 调试与错误恢复       |
+| deprecation-and-migration     | 弃用与迁移           |
+| documentation-and-adrs        | 文档与 ADR 记录      |
+| doubt-driven-development      | 质疑驱动开发         |
+| frontend-ui-engineering       | 前端 UI 工程         |
+| git-workflow-and-versioning   | Git 工作流与版本管理 |
+| idea-refine                   | 创意精炼             |
+| incremental-implementation    | 增量实现             |
+| interview-me                  | 面试模拟             |
+| performance-optimization      | 性能优化             |
+| planning-and-task-breakdown   | 规划与任务分解       |
+| security-and-hardening        | 安全与加固           |
+| shipping-and-launch           | 发布与上线           |
+| source-driven-development     | 源码驱动开发         |
+| spec-driven-development       | 规范驱动开发         |
+| test-driven-development       | 测试驱动开发         |
+| using-agent-skills            | 技能使用指南         |
 
-### [精选技能集 (Awesome Skills)](./awesome-skills.md)
+### 社区精选技能集 (Community Awesome Skills)
 
-汇集了社区中优秀的 AI 助手扩展能力与安装手册，涵盖 UI/UX 设计、自动测试、系统架构等多个领域。
-
-收录的技能库包括：
+收录的第三方技能库包括：
 
 - **[google/skills](https://github.com/google/skills)** — Google 官方 Agent Skills，覆盖 Cloud Run、BigQuery、GKE、Firebase 等 13 项 Google Cloud 产品技能
 - **[addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)** — 标准化 AI 代理工程技能模块（TDD、代码审计、重构等）
@@ -39,13 +61,37 @@
 - **原子化提交**：强制执行原子化提交策略，每一笔 Commit 必须是逻辑自洽的最小功能单元。
 - **文档先行**：在执行非琐碎变更前，必须通过 SPEC.md 或 PLAN.md 确立逻辑基准。
 
-## 快速开始
+## 快速开始 (Quick Start)
 
-1. **同步更新**: 运行 `sh update.sh` 以确保所有技能定义处于最新状态。
-2. **初始化工作流**: 运行 `npx get-shit-done-cc@latest` 为你的 AI 助手安装 GSD CLI 核心插件。
-3. **启动工程**: 在对话框中输入 `/gsd-new-project` 以标准的 GSD 流程开启新项目。
-4. **按需扩展**: 参考 [awesome-skills.md](./awesome-skills.md) 安装 UI/UX、测试生成等专项技能插件。
+```bash
+# 1. 同步所有技能定义至最新状态
+sh update.sh
 
-## 参考资源
+# 2. 安装 GSD 工作流 CLI 核心插件
+npx get-shit-done-cc@latest
+
+# 3. 以标准 GSD 流程开启新项目
+#    在对话框中输入: /gsd-new-project
+
+# 4. 安装社区技能库
+
+# Google 官方 Agent Skills（交互式选择安装项）
+npx skills add google/skills
+
+# 标准化 AI 代理工程技能模块
+# 见 awesome-skills.md 中 addyosmani/agent-skills 的详细安装说明
+
+# UI/UX 专业设计技能（需先安装 uipro-cli）
+npm install -g uipro-cli
+uipro init --ai claude --global
+
+# 5. 参考 Claude Code 最佳实践指南
+#    https://github.com/shanraisshan/claude-code-best-practice
+```
+
+## 参考资源 (Reference Resources)
 
 - [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) — Claude Code 最佳实践与配置指南
+- [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) — 标准化 AI 代理工程技能模块
+- [google/skills](https://github.com/google/skills) — Google 官方 Agent Skills 技能库
+- [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — UI/UX 专业设计技能
