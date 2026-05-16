@@ -5,18 +5,30 @@
 ## 全局行为准则 (Global Governance)
 
 ### [Antigravity / Gemini CLI 核心规范](./GEMINI.md)
+
 全局行为约束。这是 AI 代理执行任务时的底层逻辑底座，涵盖了语言偏好、安全边界、交付路径、代码质量审计以及交互标识等核心标准。所有 AI 代理在介入本项目时必须优先加载并严格执行此规范。
 
 ## 核心组件 (Core Components)
 
 ### [工程域技能模块 (Engineering Skills)](./agent-skills.md)
+
 定义了 20+ 个标准化的 AI 代理工程技能模块（如 TDD, SDD, 代码审计等），用于收敛模型幻觉并确立输出一致性标准。
 
 ### [GSD (Get Shit Done) 工作流](./GSD.md)
+
 一套完整的、基于阶段（Phase）的自动化任务执行框架。包含从需求讨论（Discuss）、计划（Plan）到执行（Execute）及验证（Verify）的全生命周期指令。
 
 ### [精选技能集 (Awesome Skills)](./awesome-skills.md)
+
 汇集了社区中优秀的 AI 助手扩展能力与安装手册，涵盖 UI/UX 设计、自动测试、系统架构等多个领域。
+
+收录的技能库包括：
+
+- **[google/skills](https://github.com/google/skills)** — Google 官方 Agent Skills，覆盖 Cloud Run、BigQuery、GKE、Firebase 等 13 项 Google Cloud 产品技能
+- **[addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)** — 标准化 AI 代理工程技能模块（TDD、代码审计、重构等）
+- **[nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)** — UI/UX 专业设计与实现技能
+
+详细的安装命令与配置说明请参见 [awesome-skills.md](./awesome-skills.md)。
 
 ## 工程规约 (Engineering Conventions)
 
@@ -33,3 +45,7 @@
 2. **初始化工作流**: 运行 `npx get-shit-done-cc@latest` 为你的 AI 助手安装 GSD CLI 核心插件。
 3. **启动工程**: 在对话框中输入 `/gsd-new-project` 以标准的 GSD 流程开启新项目。
 4. **按需扩展**: 参考 [awesome-skills.md](./awesome-skills.md) 安装 UI/UX、测试生成等专项技能插件。
+
+## 参考资源
+
+- [shanraisshan/claude-code-best-practice](https://github.com/shanraisshan/claude-code-best-practice) — Claude Code 最佳实践与配置指南

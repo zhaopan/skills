@@ -2,7 +2,7 @@
 # -----------------------------------------------------------------------------
 # 脚本名称: update.sh
 # 描述: 自动同步 addyosmani/agent-skills 仓库的工程域技能模块。
-# 逻辑: 
+# 逻辑:
 #   1. 临时挂载远程权威源 (Upstream Mapping)。
 #   2. 检索远程分支元数据 (Remote Fetching)。
 #   3. 执行特定域直接检出 (Direct Checkout Overwrite)，不产生临时文件夹。
