@@ -1,5 +1,6 @@
 ANTHROPIC_AUTH_TOKEN=
 ANTHROPIC_BASE_URL=https://token-plan-cn.xiaomimimo.com/anthropic
+
 ANTHROPIC_MODEL=mimo-v2.5
 ANTHROPIC_DEFAULT_OPUS_MODEL=mimo-v2.5-pro[1M]
 ANTHROPIC_DEFAULT_SONNET_MODEL=mimo-v2.5-pro[1M]
